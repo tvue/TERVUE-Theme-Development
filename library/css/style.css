@@ -556,6 +556,7 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+/* Footer: */
 /*
 Here's a great tutorial on how to
 use color variables properly:
@@ -1035,7 +1036,7 @@ I mean, you can do whatever you want. The world is your oyster. Unless
 you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
 /******************************************************************
-Site Name: tervue
+Site Name: tervue.com
 Author: Tuater Vue
 
 Stylesheet: Alert Styles
@@ -1076,7 +1077,7 @@ you can just remove this stylesheet.
 }
 
 /******************************************************************
-Site Name: tervue 
+Site Name: tervue.com
 Author: Tuater Vue
 
 Stylesheet: Button Styles
@@ -1146,8 +1147,8 @@ and it will create a button dependant on those variables.
 }
 
 /******************************************************************
-Site Name:
-Author:
+Site Name: tervue.com
+Author: Tuater Vue
 
 Stylesheet: Form Styles
 
@@ -1535,14 +1536,14 @@ LINK STYLES
 *********************/
 /* line 82, ../scss/breakpoints/_base.scss */
 a, a:visited {
-  color: #f01d4f;
+  color: #0080FF;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
 /* line 86, ../scss/breakpoints/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #d10e3c;
+  color: #0069d1;
 }
 /* line 96, ../scss/breakpoints/_base.scss */
 a:link, a:visited:link {
@@ -1609,7 +1610,7 @@ HEADER STYLES
 *********************/
 /* line 155, ../scss/breakpoints/_base.scss */
 .header {
-  background-color: #323944;
+  background-color: #333333;
 }
 
 /* line 159, ../scss/breakpoints/_base.scss */
@@ -2136,8 +2137,14 @@ FOOTER STYLES
 /* line 863, ../scss/breakpoints/_base.scss */
 .footer {
   clear: both;
-  background-color: #323944;
+  background-color: #333333;
   color: #f8f9fa;
+  height: 10em;
+}
+/* line 869, ../scss/breakpoints/_base.scss */
+.footer p {
+  padding-top: 4em;
+  text-align: center;
 }
 
 /*

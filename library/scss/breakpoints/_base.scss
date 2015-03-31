@@ -153,7 +153,7 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color:$black;
+	background-color:$gray-black;
 }
 
 	#logo {
@@ -862,8 +862,15 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
+	background-color: $gray-black;
 	color: $light-gray;
+	height: 10em;
+
+	p{
+		padding-top: 4em;
+		text-align: center; 
+		
+	}
 }
 
 	/*
