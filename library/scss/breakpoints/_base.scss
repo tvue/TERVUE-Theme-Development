@@ -74,6 +74,12 @@ HEADER STYLES
 Nav Menu
 *********************/
 
+.toggle{
+  background-color: transparent;
+  height: 2.5em;
+  border: none;
+}
+
 .menuTrigger{
   float: left;
   padding: 1.6em;
@@ -90,56 +96,58 @@ Nav Menu
   border-radius: 3px;
   -webkit-transition: .3s;
   transition: .3s;
-
-	a:visited, a:hover {
-		color: $white !important;
-	}
 }
 
-.main-navigation {
-
-    margin-top: 1.3em;
-
-    .menu-primary-menu-container {
-      float: right;
-    }
-
-    li {
-
-      margin-left: 1em;
-
-        a {
-          color: $white;
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-size: 0.9em;
-        }
-    }
-
-
-  }
-
-.sideBarNav {
-  display: block;
-
-  position: fixed;
-  top: 0px;
-  right: -300px;
-  width: 300px;
+.sideMenu {
+  background-color: $gray-black;
+  width: 20%;
   height: 100%;
-  z-index:50;
-  background: $gray-black;
-  color: $white;
-  padding: 2em;
-  transform: translate3d(0px,0px,0px);
-  transition: all 0.4s ease;
+  top:0;
+  left:0;
+  position:fixed;
 }
 
+.sideMenuNav{
+  margin: 3em;
+
+  a:link, a:visited
+  {
+		text-decoration: none;
+		color: $white !important;
+		font-size: 30px;
+		//padding:2em;
+	}
+  a:hover{
+  	//background-color:gray !important;
+  }
+}
+
+.mainPage .sideMenu{
+	left:-20%;
+	//visibility: hidden; 
+	//width:0px;
+}
+
+.mainPage .page{
+	left: 0;
+}
+
+.sideMenu, .page{
+	//width:0px;
+	-webkit-transition: left .5s;
+	moz-webkit-transition:left .5s;
+	transition: left .5s;
+}
 
 /*********************
 GENERAL STYLES
 *********************/
+
+.page{
+	left: 20%;
+	position: relative;
+
+}
 
 .navBar{
 	height: 100px;

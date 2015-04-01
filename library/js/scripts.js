@@ -206,5 +206,11 @@ jQuery(document).ready(function($) {
 
        parallaxIt($(".site-branding"),0.13,'background','',true);
 
+//Side Menu
+$(document).ready(function(){
+    $('.toggle').click(function(){
+        $('body').toggleClass('mainPage');
+    });
+});
 
 }); /* end of as page load scripts */

@@ -1,3 +1,5 @@
+<body class = "mainPage">
+<div class="page">
 <?php get_header(); ?>
 
 			<div id="content">
@@ -65,3 +67,11 @@
 			</div>
 
 <?php get_footer(); ?>
+</div>
+<div class="sideMenu">
+	  	<div class="sideMenuNav">
+    <?php //Get wp_nav
+     wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+ </div>
+</div>
+</body>

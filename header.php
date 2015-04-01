@@ -7,9 +7,8 @@
 
 <!--Header Image!-->
 	<div class="header-image">
-		<a href="#" class="menuTrigger"><?php include("library/images/menuButton.svg"); ?></a>
+		<a href="#" class="menuTrigger" ><button class = "toggle"><?php include("library/images/menuButton.svg"); ?></button></a>
 
-            
 		<?php 
                     if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
                         echo '<div class="site-branding header-background-image" style="background-image: url(' . get_header_image() . ')">'; 
@@ -25,8 +24,6 @@
     </div>
     <div class="menu-primary-menu-container">
     	<div class-"sideBarNav">
-    <?php //Get wp_nav
-     wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
  </div>
  </div>
 
