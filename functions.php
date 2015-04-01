@@ -60,6 +60,11 @@ function bones_ahoy() {
 
 } /* end bones ahoy */
 
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
 // let's get this party started
 add_action( 'after_setup_theme', 'bones_ahoy' );
 

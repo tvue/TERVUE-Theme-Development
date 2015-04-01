@@ -5,6 +5,31 @@
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
+<!--Header Image!-->
+	<div class="header-image">
+		<a href="#" class="menuTrigger"><?php include("library/images/menuButton.svg"); ?></a>
+
+            
+		<?php 
+                    if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
+                        echo '<div class="site-branding header-background-image" style="background-image: url(' . get_header_image() . ')">'; 
+                    } else {
+                        echo '<div class="site-branding">';
+                    }
+                    ?>
+		
+                    <div class="title-box">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                    </div>
+    </div>
+    <div class="menu-primary-menu-container">
+    	<div class-"sideBarNav">
+    <?php //Get wp_nav
+     wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+ </div>
+ </div>
+
 	<head>
 		<meta charset="utf-8">
 
@@ -49,8 +74,9 @@
 				<div id="inner-header" class="wrap cf">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
+					<!--<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					!-->
+					<div class="navBar"></div>
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
