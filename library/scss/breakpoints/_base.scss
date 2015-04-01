@@ -132,13 +132,20 @@ Nav Menu
 	left: 0;
 }
 
-.sideMenu, .page{
+.sideMenu{
+	//width:0px;
+	visibility: none;
+	-webkit-transition: left .5s;
+	moz-webkit-transition:left .5s;
+	transition: left .5s;
+	position:fixed;
+}
+.page{
 	//width:0px;
 	-webkit-transition: left .5s;
 	moz-webkit-transition:left .5s;
 	transition: left .5s;
 }
-
 /*********************
 GENERAL STYLES
 *********************/
@@ -146,7 +153,37 @@ GENERAL STYLES
 .page{
 	left: 20%;
 	position: relative;
+	//width:100%
+}
+.row{
 
+		p, h2{
+		text-align: center;
+	}
+
+	padding:2em;
+	padding-top: 4em;
+	height:600px;
+	img{
+		width:80%;
+	}
+}
+
+.imageFooter{
+	img{
+		width:100%;
+	}
+}
+
+.icon{
+	width: 100%;
+  	height: auto;
+}
+.column {
+  float: left;
+  width: 33%;
+  padding-right:5em;
+  padding-left:5em;
 }
 
 .navBar{
