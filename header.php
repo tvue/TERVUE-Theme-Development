@@ -7,24 +7,10 @@
 
 <!--Header Image!-->
 	<div class="header-image">
-		<a href="#" class="menuTrigger" ><button class = "toggle"><?php include("library/images/menuButton.svg"); ?></button></a>
-
-		<?php 
-                    if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
-                        echo '<div class="site-branding header-background-image" style="background-image: url(' . get_header_image() . ')">'; 
-                    } else {
-                        echo '<div class="site-branding">';
-                    }
-                    ?>
-		
-                    <div class="title-box">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-                    </div>
+		<a href="#" class="menuArea" ><button class ="toggle"><?php include("library/images/menuButton.svg"); ?></button></a>
+	<div class="page-header-img"></div>
     </div>
     <div class="menu-primary-menu-container">
-    	<div class-"sideBarNav">
- </div>
  </div>
 
 	<head>
