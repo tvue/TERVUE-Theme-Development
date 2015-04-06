@@ -116,95 +116,95 @@ jQuery(document).ready(function($) {
   */
   loadGravatars();
 
-         function parallaxIt(obj,ratio,imgtype,following,header) {
-           if(!header) {
-             header = false;
-           }
+       //   function parallaxIt(obj,ratio,imgtype,following,header) {
+       //     if(!header) {
+       //       header = false;
+       //     }
 
-           $(window).scroll(function() {
-             var offset = obj.offset().top;
-             var objH = obj.height();
-             var wH = $(window).height();
-             var newtop = $(window).scrollTop();
+       //     $(window).scroll(function() {
+       //       var offset = obj.offset().top;
+       //       var objH = obj.height();
+       //       var wH = $(window).height();
+       //       var newtop = $(window).scrollTop();
 
-             if(imgtype == "background") {
-               if(header) {
-                 newtophalf = ""+(50 - ((newtop-offset) * ratio)) +"%";
-                 headertranslate = "50% "+newtophalf+"";
-               } else {
-                 newtophalf = ""+((newtop-offset) * ratio) +"px";
-                 headertranslate = "0px "+newtophalf+"";
-               }
+       //       if(imgtype == "background") {
+       //         if(header) {
+       //           newtophalf = ""+(50 - ((newtop-offset) * ratio)) +"%";
+       //           headertranslate = "50% "+newtophalf+"";
+       //         } else {
+       //           newtophalf = ""+((newtop-offset) * ratio) +"px";
+       //           headertranslate = "0px "+newtophalf+"";
+       //         }
 
-               if(offset<(newtop+wH) && (offset+objH)>(newtop-objH)) {
-                 //console.log("in view");
-                 $(obj).css("background-position",headertranslate);
-                 $(following).css("background-position",headertranslate);
-               }
-             } else {
-                 if(offset<(newtop+wH) && (offset+objH)>(newtop-objH)) {
+       //         if(offset<(newtop+wH) && (offset+objH)>(newtop-objH)) {
+       //           //console.log("in view");
+       //           $(obj).css("background-position",headertranslate);
+       //           $(following).css("background-position",headertranslate);
+       //         }
+       //       } else {
+       //           if(offset<(newtop+wH) && (offset+objH)>(newtop-objH)) {
 
 
-                   if(header) {
+       //             if(header) {
 
                      
-                     if($(obj).next().attr("id") == "cholder") {
-                     } else {
-                       newtophalf = ""+(newtop / (1+ratio)) +"px";
-                       newtop = "-"+newtop+"px";
-                       newtranslate = "translate3d(0px,"+newtop+",0px)";
-                       headertranslate = "translate3d(0px,"+newtophalf+",0px)";
+       //               if($(obj).next().attr("id") == "cholder") {
+       //               } else {
+       //                 newtophalf = ""+(newtop / (1+ratio)) +"px";
+       //                 newtop = "-"+newtop+"px";
+       //                 newtranslate = "translate3d(0px,"+newtop+",0px)";
+       //                 headertranslate = "translate3d(0px,"+newtophalf+",0px)";
 
-                       $(obj).css("transform",headertranslate);
-                       $(following).css("transform",headertranslate);
-                     }
-
-
-                   } else {
-                     $(obj).css("transform",headertranslate);
-                     $(following).css("transform",headertranslate);
-                   }
-                 }
+       //                 $(obj).css("transform",headertranslate);
+       //                 $(following).css("transform",headertranslate);
+       //               }
 
 
-             }
-
-           });
-       }
-
-
-
-
-       function inView(obj,threshholdBottom,threshholdTop) {
-           var offset = $(".header " + obj).offset().top;
-           var objH = $(".header " + obj).height();
+       //             } else {
+       //               $(obj).css("transform",headertranslate);
+       //               $(following).css("transform",headertranslate);
+       //             }
+       //           }
 
 
-           function calcView() {
-             var wH = $(window).height();
-             var newtop = $(window).scrollTop();
+       //       }
 
-                //console.log("object: "+offset + " " + (newtop+wH) + "   maxobj: " + (offset+objH)+" "+(newtop-objH));
-               if(((offset+threshholdBottom)<(newtop+wH)) && ((offset-threshholdTop)>(newtop-objH))) {
-
-                 $(obj).addClass("inView");
-
-               } else {
-
-                 $(obj).removeClass("inView");
-               }
-           }
-
-           $(window).scroll(function() {
-             calcView();
-
-           });
-
-           calcView();
-       }
+       //     });
+       // }
 
 
-       parallaxIt($(".site-branding"),0.13,'background','',true);
+
+
+       // function inView(obj,threshholdBottom,threshholdTop) {
+       //     var offset = $(".header " + obj).offset().top;
+       //     var objH = $(".header " + obj).height();
+
+
+       //     function calcView() {
+       //       var wH = $(window).height();
+       //       var newtop = $(window).scrollTop();
+
+       //          //console.log("object: "+offset + " " + (newtop+wH) + "   maxobj: " + (offset+objH)+" "+(newtop-objH));
+       //         if(((offset+threshholdBottom)<(newtop+wH)) && ((offset-threshholdTop)>(newtop-objH))) {
+
+       //           $(obj).addClass("inView");
+
+       //         } else {
+
+       //           $(obj).removeClass("inView");
+       //         }
+       //     }
+
+       //     $(window).scroll(function() {
+       //       calcView();
+
+       //     });
+
+       //     calcView();
+       // }
+
+
+       // parallaxIt($(".site-branding"),0.13,'background','',true);
 
 //Side Menu
 $(document).ready(function(){
