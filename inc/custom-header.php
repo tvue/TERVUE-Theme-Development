@@ -26,7 +26,7 @@ function custom_header_setup() {
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1280,
-		'height'                 => 700,
+		'height'                 => 800,
 		'flex-height'            => false,
 		'wp-head-callback'       => 'header_style',
 		'admin-head-callback'    => 'admin_header_style',
@@ -35,7 +35,7 @@ function custom_header_setup() {
 }
 add_action( 'after_setup_theme', 'custom_header_setup' );
 
-if ( ! function_exists( 'my_simone_header_style' ) ) :
+if ( ! function_exists( 'header_style' ) ) :
 
 function header_style() {
 	$header_text_color = get_header_textcolor();
@@ -75,7 +75,7 @@ if ( ! function_exists( 'admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see my_simone_custom_header_setup().
+ * @see custom_header_setup().
  */
 function admin_header_style() {
 ?>
@@ -113,6 +113,19 @@ function admin_header_image() {
 		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
 		<?php if ( get_header_image() ) : ?>
 		<img src="<?php header_image(); ?>" alt="">
+		<?php endif; ?>
+	</div>
+<?php
+}
+
+function admin_header_image1() {
+	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
+?>
+	<div id="headimg">
+		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+		<?php if ( get_header_image1() ) : ?>
+		<img src="<?php header_image1(); ?>" alt="">
 		<?php endif; ?>
 	</div>
 <?php
