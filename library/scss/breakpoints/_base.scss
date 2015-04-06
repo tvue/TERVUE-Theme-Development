@@ -15,6 +15,10 @@ and will be used across all viewports.
 HEADER STYLES
 *********************/
 
+.header-size{
+	height: 200px;
+}
+
 .header-image img {
     display: block;
     margin: 0 auto;
@@ -33,6 +37,13 @@ HEADER STYLES
     background: $gray-black;
     height: 700px;
     //background: hsl(202, 62%, 45%);
+}
+
+.page-header-img{
+	//padding: 10rem 0;
+    //text-align: center;
+    background: $gray-black;
+    height: 200px;
 }
 .title-box {
     width: 300px;
@@ -80,22 +91,9 @@ Nav Menu
   border: none;
 }
 
-.menuTrigger{
+.menuArea{
   float: left;
   padding: 1.6em;
-  color: rgba(255,255,255,.9);
-  font-size: 1.2em;
-  text-decoration: none;
-  //font-family: Raleway;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  border: 1px solid rgba(255,255,255,0);
-  border-radius: 3px;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 .sideMenu {
@@ -105,20 +103,21 @@ Nav Menu
   top:0;
   left:0;
   position:fixed;
+  box-shadow: 5px 0px 6px $transparent-black;
 }
 
 .sideMenuNav{
   margin: 3em;
 
-  a:link, a:visited
+  a, a:link, a:visited
   {
 		text-decoration: none;
 		color: $white !important;
-		font-size: 30px;
+		font-size: 25px;
 		//padding:2em;
 	}
   a:hover{
-  	//background-color:gray !important;
+  	color: $soft-gray !important;
   }
 }
 
@@ -126,6 +125,7 @@ Nav Menu
 	left:-20%;
 	//visibility: hidden; 
 	//width:0px;
+	box-shadow: 0px 0px 0px transparent;
 }
 
 .mainPage .page{
@@ -134,14 +134,13 @@ Nav Menu
 
 .sideMenu{
 	//width:0px;
-	visibility: none;
+	visibility: visible;
 	-webkit-transition: left .5s;
 	moz-webkit-transition:left .5s;
 	transition: left .5s;
 	position:fixed;
 }
 .page{
-	//width:0px;
 	-webkit-transition: left .5s;
 	moz-webkit-transition:left .5s;
 	transition: left .5s;
@@ -328,7 +327,7 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color:$gray-black;
+	background-color:$soft-gray;
 }
 
 	#logo {
@@ -1037,8 +1036,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $gray-black;
-	color: $light-gray;
+	background-color: $soft-gray;
+	color: $gray-black;
 	height: 10em;
 
 	p{
