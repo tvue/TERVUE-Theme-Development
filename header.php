@@ -8,7 +8,7 @@
 <!--Header Image!-->
 	<div class="header-image">
 		<a href="#" class="menuArea" ><button class ="toggle"><?php include("library/images/menuButton.svg"); ?></button></a>
-	<div class="page-header-img"></div>
+	<div class="page-header-bar"></div>
     </div>
     <div class="menu-primary-menu-container">
  </div>
@@ -52,7 +52,7 @@
 
 		<div id="container">
 
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="pageheader" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div id="inner-header" class="wrap cf">
 

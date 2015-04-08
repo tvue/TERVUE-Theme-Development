@@ -22,6 +22,7 @@ HEADER STYLES
 .header-image img {
     display: block;
     margin: 0 auto;
+    min-height:50px;
 }
 
 .header-background-image {
@@ -39,11 +40,25 @@ HEADER STYLES
     //background: hsl(202, 62%, 45%);
 }
 
-.page-header-img{
+.page-header-bar{
 	//padding: 10rem 0;
     //text-align: center;
-    background: $gray-black;
-    height: 200px;
+    background: url(../../library/images/sodaHeader.png);
+	width: 100%; /*or your image's width*/
+	margin: 0;
+	padding: 0;
+    //background: $gray-black;
+    height: 280px;
+}
+.header-icon {
+
+	margin-top: -14em;
+
+	img {
+		display: block;
+		margin:0 auto;
+		//margin-left:50%;
+		}
 }
 .title-box {
     width: 300px;
@@ -91,6 +106,16 @@ Nav Menu
   border: none;
 }
 
+.close{
+  background-color: transparent;
+  //height: 2.5em;
+  border: none;
+  float: right;
+  width: 3em;
+  height: 3em;
+  padding-right: 1em;
+}
+
 .menuArea{
   float: left;
   padding: 1.6em;
@@ -99,10 +124,11 @@ Nav Menu
 .sideMenu {
   background-color: $gray-black;
   width: 20%;
+  //min-width:20%;
   height: 100%;
   top:0;
   left:0;
-  position:fixed;
+  position:absolute;
   box-shadow: 5px 0px 6px $transparent-black;
 }
 
@@ -125,7 +151,7 @@ Nav Menu
 	left:-20%;
 	//visibility: hidden; 
 	//width:0px;
-	box-shadow: 0px 0px 0px transparent;
+	//box-shadow: 0px 0px 0px transparent;
 }
 
 .mainPage .page{
@@ -140,6 +166,13 @@ Nav Menu
 	transition: left .5s;
 	position:fixed;
 }
+
+.page{
+	left: 20%;
+	position: absolute;
+	//width:100%;
+}
+
 .page{
 	-webkit-transition: left .5s;
 	moz-webkit-transition:left .5s;
@@ -149,11 +182,6 @@ Nav Menu
 GENERAL STYLES
 *********************/
 
-.page{
-	left: 20%;
-	position: relative;
-	//width:100%
-}
 .row{
 
 		p, h2{
@@ -245,7 +273,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -327,8 +355,14 @@ HEADER STYLES
 *********************/
 
 .header {
+
 	background-color:$soft-gray;
 }
+
+.pageHeader {
+	border-top: 6px solid $white;
+	background-color:$soft-gray;
+	}
 
 	#logo {
 		margin: 0.75em 0;
@@ -426,7 +460,8 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+	margin: 0 auto;
+	margin-top: 1.3em;
 }
 
 		.hentry {
@@ -468,10 +503,13 @@ POSTS & CONTENT STYLES
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
 		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
+		.page {}           /* general article on a page style */
 		.attachment {}      /* general style on an attatchment */
 		.sticky {}          /* sticky post style */
-		.hentry {}          /* hentry class */
+		.hentry {
+			border-radius:.1em;
+			border: none;
+		}          /* hentry class */
 		.category-slug {}   /* style by category (i.e. category-videos) */
 		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
@@ -996,7 +1034,10 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+ 	padding-left: 1em;
+  	margin-right: -100px;
+}
 
 	.widgettitle {}
 

@@ -12,6 +12,13 @@ come into play. Have fun!
 
 ******************************************************************/
 
+/*********************
+SideMenu Style
+*********************/
+
+.sideMenu {
+	visibility:none;
+}
 
 /*********************
 GENERAL STYLES
@@ -142,7 +149,7 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	//margin-top: 2.2em;
 }
 
 	.widgettitle {

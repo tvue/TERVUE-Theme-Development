@@ -213,4 +213,10 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $('.close').click(function(){
+        $('body').toggleClass('mainPage');
+    });
+});
+
 }); /* end of as page load scripts */

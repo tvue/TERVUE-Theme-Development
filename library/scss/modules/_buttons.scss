@@ -72,3 +72,14 @@ and it will create a button dependant on those variables.
   } // end active
 
 } // end blue button
+
+/* Search form */
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  background: $light-gray;
+  border: 1px solid white;
+  border-radius: .1em;
+  color: $gray-black;
+  width: 5em;
+  height: 2em;
+}
